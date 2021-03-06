@@ -1,5 +1,7 @@
-from colorama import Fore,init
+from colorama import Fore, init
 import pyfiglet
+
+
 def InfoCommand():
     init(autoreset=True)
     MoldyDescription = """ 
@@ -16,7 +18,7 @@ def InfoCommand():
     -----------------------------------------------------
     Made with love in Ecuador and Colombia.
     """
-    MoldyAscii = pyfiglet.figlet_format('Moldy')
-    
+    MoldyAscii = pyfiglet.figlet_format("Moldy")
+
     print(Fore.BLUE + MoldyAscii)
     print(MoldyDescription)

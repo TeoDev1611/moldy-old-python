@@ -148,5 +148,6 @@ dmypy.json
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
-
+.vscode/
+src/commands/file.py
 # End of https://www.toptal.com/developers/gitignore/api/python,vscode
