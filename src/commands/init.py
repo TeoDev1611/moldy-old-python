@@ -1,10 +1,9 @@
-from typing import Text
 import yaml
 from colorama import init, Fore
 import secrets
 
 
-def InitMoldy():
+def InitProjectMoldy():
     init(autoreset=True)
     packagename = input("What is the name of the Moldy package? ")
     authorpackage = input("What is the author of the Moldy package? ")
@@ -20,7 +19,10 @@ def InitMoldy():
             ]
         }
     ]
-    with open("Moldy.yaml", "w") as f:
-        yaml.dump(templateText, f)
+    try:
+        with open("MoldySpecs.yaml", "w") as f:
+            yaml.dump(templateText, f)
 
-    print(Fore.CYAN + "Created the Moldy.yaml file")
+        print(Fore.CYAN + "Created the MoldySpecs.yaml file")
+    except Exception as err:
+        print(Fore.RED + "Error: " + err)

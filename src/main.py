@@ -2,7 +2,8 @@ import click as cli
 from commands.version import VersionCommand
 from commands.info import InfoCommand
 from commands.install import *
-from commands.init import *
+from commands.init import InitProjectMoldy
+from commands.new import NewMoldyFile
 
 # App Declaration
 @cli.group()
@@ -69,7 +70,15 @@ def initial():
     """
     Initial a template for make a moldy package he helps generated a Moldy.yaml File
     """
-    InitMoldy()
+    InitProjectMoldy()
+
+
+@app.command("new", help="Initial a base template for install from Moldy.yaml file")
+def new():
+    """
+    Initial a Moldy.yaml file for install more dependencies
+    """
+    NewMoldyFile()
 
 
 if __name__ == "__main__":
