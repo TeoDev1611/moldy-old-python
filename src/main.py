@@ -2,6 +2,7 @@ import click as cli
 from commands.version import VersionCommand
 from commands.info import InfoCommand
 from commands.install import *
+from commands.init import *
 
 # App Declaration
 @cli.group()
@@ -60,6 +61,15 @@ def custom(url):
     --------------------------------------------------------------
     """
     InstallCommandURL(url)
+
+
+# INITIAL A PACKAGE
+@app.command("init", help="Initial a template for make a package in Moldy")
+def initial():
+    """
+    Initial a template for make a moldy package he helps generated a Moldy.yaml File
+    """
+    InitMoldy()
 
 
 if __name__ == "__main__":
