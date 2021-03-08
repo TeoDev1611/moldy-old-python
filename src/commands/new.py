@@ -9,7 +9,6 @@ def NewMoldyFile():
             "moldyconfig": {"version": "Moldy 1.0  Alpha"},
             "packages": {
                 "url": "https://www.github.com/Moldy-Community/HTML-Template",
-                "github": "Moldy-Community/HTML-Template",
             },
         }
     ]

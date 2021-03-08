@@ -4,6 +4,7 @@ from commands.info import InfoCommand
 from commands.install import *
 from commands.init import InitProjectMoldy
 from commands.new import NewMoldyFile
+from commands.dependencies import InstallDependencies
 
 # App Declaration
 @cli.group()
@@ -19,7 +20,8 @@ def app():
     Repository: www.github.com/Moldy/Cli
     Web Page: www.moldy.github.io
 
-    -----------------------------------------------------
+    -----------------------------
+
     Made with love in Ecuador and Colombia.
     """
     pass
@@ -65,7 +67,7 @@ def custom(url):
 
 
 # INITIAL A PACKAGE
-@app.command("init", help="Initial a template for make a package in Moldy")
+@app.command("new", help="Initial a template for make a package in Moldy")
 def initial():
     """
     Initial a template for make a moldy package he helps generated a Moldy.yaml File
@@ -73,12 +75,20 @@ def initial():
     InitProjectMoldy()
 
 
-@app.command("new", help="Initial a base template for install from Moldy.yaml file")
+@app.command("init", help="Initial a base template for install from Moldy.yaml file")
 def new():
     """
     Initial a Moldy.yaml file for install more dependencies
     """
     NewMoldyFile()
+
+
+@app.command("dependencies", help="Install the dependencies from Moldy.yaml file")
+def dependencies():
+    """
+    Install the dependencies from the Moldy.yaml file
+    """
+    InstallDependencies()
 
 
 if __name__ == "__main__":

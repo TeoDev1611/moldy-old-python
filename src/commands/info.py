@@ -18,7 +18,7 @@ def InfoCommand():
     -----------------------------------------------------
     Made with love in Ecuador and Colombia.
     """
-    MoldyAscii = pyfiglet.figlet_format("Moldy")
+    MoldyAscii = "Moldy"
 
     print(Fore.BLUE + MoldyAscii)
     print(MoldyDescription)

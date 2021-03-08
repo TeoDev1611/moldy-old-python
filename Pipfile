@@ -18,6 +18,7 @@ pyfiglet = "*"
 [dev-packages]
 black = "20.8b1"
 flake8 = "3.8.4"
+auto-py-to-exe = "*"
 
 [pipenv]
 allow_prereleases = true
